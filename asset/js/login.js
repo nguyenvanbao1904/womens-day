@@ -40,21 +40,21 @@ function check (){
                     return user.userName.includes(userNameInput)
                 })
                var pass = passwords.passwords.find(function(password){
-                   return password.id===userName.id
+                    return password.id===userName.id
                })
                 if(userName.userName==userNameInput && pass.password==passwordInput){
                     alert('Chúc mừng em đã đăng nhập thành công !!!')
-                    userNameOrPassword.innerHTML = ""
+                    userNameOrPassword.innerText = ''
                     users.userNames.status = 'Ok'
                 } else{
-                    alertError(userNameOrPassword,'Tên đăng nhập hoặc mật khẩu không chính xác !!')
+                    console.log('sai rồi kìa')
                 }
             })
             var checkUser = users.userNames.some(function(user){
                 return user.userName==userNameInput
             })
             if(!checkUser){
-                console.log('sai rồi kìa')
+                alertError(userNameOrPassword,'Tài Khoản hoặc mật khẩu không chính xác !!')
             }
         })
     }
