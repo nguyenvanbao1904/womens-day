@@ -4,7 +4,7 @@ var passwordsApi = 'https://nguyenvanbao1904.github.io/password.json'
 var submitBtn = document.querySelector('.submit-btn')
 
 function start(){
-     check()
+    check()
 
 }
 
@@ -40,9 +40,9 @@ function check (){
                })
                 if(userName.userName==userNameInput && pass.password==passwordInput){
                     alert('Chúc mừng em đã đăng nhập thành công !!!')
+                    users.userNames.status = 'Ok'
                 } else{
                     alert('Sai cmnr !')
-                    
                 }
             })
             var checkUser = users.userNames.some(function(user){
