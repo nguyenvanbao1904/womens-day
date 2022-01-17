@@ -26,10 +26,14 @@ function getPasswords(callback){
         .then(callback)
 }
 
+function alertError(name,messeage){
+    name.innerText = messeage
+}
 function check (){
     submitBtn.onclick=function(){
         var userNameInput = document.querySelector('#userName').value   
         var passwordInput = document.querySelector('#password').value
+        var userNameOrPassword = document.querySelector('.user-name-or-password-small')
         getUsers(function(users){
             getPasswords(function(passwords){
                 var userName = users.userNames.find(function(user){
@@ -40,16 +44,17 @@ function check (){
                })
                 if(userName.userName==userNameInput && pass.password==passwordInput){
                     alert('Chúc mừng em đã đăng nhập thành công !!!')
+                    userNameOrPassword.innerHTML = ""
                     users.userNames.status = 'Ok'
                 } else{
-                    alert('Sai cmnr !')
+                    alertError(userNameOrPassword,'Tên đăng nhập hoặc mật khẩu không chính xác !!')
                 }
             })
             var checkUser = users.userNames.some(function(user){
                 return user.userName==userNameInput
             })
             if(!checkUser){
-                alert('Sai cmnr !')
+                // alert('Sai cmnr !')
             }
         })
     }

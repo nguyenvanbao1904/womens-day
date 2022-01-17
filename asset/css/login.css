@@ -72,3 +72,8 @@ input::placeholder{
     padding: 16px 0;
     margin-bottom: 30px;
 }
+small{
+    color: red;
+    font-size: 14px;
+    font-weight: 500;
+}
