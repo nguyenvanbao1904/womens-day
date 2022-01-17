@@ -54,7 +54,7 @@ function check (){
                 return user.userName==userNameInput
             })
             if(!checkUser){
-                // alert('Sai cmnr !')
+                console.log('sai rồi kìa')
             }
         })
     }
