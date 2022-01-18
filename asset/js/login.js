@@ -47,7 +47,7 @@ function check (){
                     userNameOrPassword.innerText = ''
                     users.userNames.status = 'Ok'
                 } else{
-                    console.log('sai rồi kìa')
+                    alertError(userNameOrPassword,'Tài Khoản hoặc mật khẩu không chính xác !!')
                 }
             })
             var checkUser = users.userNames.some(function(user){
