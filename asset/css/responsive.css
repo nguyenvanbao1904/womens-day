@@ -27,3 +27,14 @@
         align-items: center;
     }
 }
+@media (max-height:600px){
+    .request{
+        padding-top: 20px;
+    }
+    #userName {
+        margin-top: 15px;
+    }  
+    input{
+        margin: 5px 0;
+    }
+}
