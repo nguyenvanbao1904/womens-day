@@ -38,10 +38,6 @@ function updateStatus(id,data){
     fetch(usersApi+'/'+id,options)
 }
 
-function nextPage(){
-    window.location.href ='admin.html'
-}
-
 function check (){
     var submitBtn = document.querySelector('.submit-btn')
     if(submitBtn){
@@ -64,6 +60,9 @@ function check (){
                             "id": userName.id,
                             "userName": userName.userName,
                             "status":"Ok"
+                        }
+                        function nextPage(){
+                            window.location.href =`${userName.userName}.html`
                         }
                         updateStatus(userName.id,data)
                         setTimeout(nextPage,1000)
