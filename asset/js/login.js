@@ -38,7 +38,7 @@ function updateStatus(id,data){
     fetch(usersApi+'/'+id,options)
 }
 
-function test(){
+function nextPage(){
     window.location.href ='admin.html'
 }
 
@@ -66,7 +66,7 @@ function check (){
                             "status":"Ok"
                         }
                         updateStatus(userName.id,data)
-                        setTimeout(test,1000)
+                        setTimeout(nextPage,1000)
                     } else{
                         alertError(userNameOrPassword,'Tài Khoản hoặc mật khẩu không chính xác !!')
                     }
