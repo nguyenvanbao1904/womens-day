@@ -1,3 +1,4 @@
+// check sign in
 var usersApi = 'https://data-base-women-day.herokuapp.com/api/userNames'
 var passwordsApi = 'https://data-base-women-day.herokuapp.com/api/passwords'
 var userId = Number(document.querySelector('.name-id').textContent)
@@ -5,8 +6,8 @@ var userText = document.querySelector('.name-text').textContent
 var modal = document.querySelector('.modal')
 
 function start(){
-    checkStatus()
-    //setTimeout(resetStatus,5000)
+    //checkStatus()
+    setTimeout(resetStatus,5000)
     btnLogin()
     btnClose()
 }
@@ -40,7 +41,6 @@ function updateStatus(id,data){
         body: JSON.stringify(data)
     }
     fetch(usersApi+'/'+id,options)
-    console.log(data)
 }
 
 function resetStatus(){
@@ -68,3 +68,41 @@ function btnClose(){
         }
     })
 }
+
+// Feature
+
+;(function openAlbum(){
+    let openBtns = document.querySelectorAll('.open-view')
+    let albumContainer = document.querySelector('.album-container')
+    let albumBody = albumContainer.querySelector('.album-body')
+
+    function show(){
+        albumContainer.classList.add('show')
+        albumBody.classList.add('show')
+    }
+
+    openBtns.forEach(function(openBtn){
+        openBtn.addEventListener('click',show)
+        albumBody.classList.add('show')
+    })
+
+    document.querySelector('.picture-container img').addEventListener('click',show)
+})()
+
+;(function closeAlbum(){
+    let albumContainer = document.querySelector('.album-container')
+    let iconClose = albumContainer.querySelector('i')
+    let albumBody = albumContainer.querySelector('.album-body')
+
+        albumContainer.addEventListener('click',function(e){
+            if(albumContainer===e.target){
+                albumContainer.classList.remove('show')
+                albumBody.classList.remove('show')
+            }
+        })
+
+        iconClose.addEventListener('click',function(){
+            albumContainer.classList.remove('show')
+            albumBody.classList.remove('show')
+        })
+})()
