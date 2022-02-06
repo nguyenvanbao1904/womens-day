@@ -20,6 +20,10 @@
     .header-content ul li{
         padding: 0 5px;
     }
+    .bottom-line{
+        width: calc(100% - 10px);
+        left: 5px;
+    }
 }
 /* tablet */
 @media (max-width:1023px) and (min-width:740px){
