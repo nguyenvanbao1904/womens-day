@@ -221,12 +221,19 @@ body{
     line-height: 40px;
     -webkit-tap-highlight-color: transparent;
 }
+.header-content ul li a{
+    position: relative;
+    line-height: 40px;
+    -webkit-tap-highlight-color: transparent;
+    text-decoration: none;
+    color: black;
+}
 .bottom-line{
     background-color: black;
     position: absolute;
     height: 3px;
     width: calc(100% - 40px);
-    bottom: -10px;
+    bottom: -5px;
     left: 20px;
     opacity: 0;
     transition: 0.2s ease-in-out;

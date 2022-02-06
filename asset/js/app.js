@@ -6,7 +6,7 @@ var userText = document.querySelector('.name-text').textContent
 var modal = document.querySelector('.modal')
 
 function start(){
-    //checkStatus()
+    checkStatus()
     setTimeout(resetStatus,5000)
     btnLogin()
     btnClose()
@@ -83,7 +83,7 @@ function btnClose(){
 
     openBtns.forEach(function(openBtn){
         openBtn.addEventListener('click',show)
-        albumBody.classList.add('show')
+        albumBody.classList.add('show') 
     })
 
     document.querySelector('.picture-container img').addEventListener('click',show)
