@@ -1,0 +1,40 @@
+/* mobile */
+@media (max-width: 739px){
+    .right{
+        padding: 20px 30px 40px;
+    }
+    .request{
+        padding-top: 70px;
+    }
+    .main{
+        height: 100%;
+    }
+    .title{
+        font-size: 18px;
+    }
+}
+/* tablet */
+@media (max-width:1023px) and (min-width:740px){
+    .request{
+        padding-top: 100px;
+    }
+}
+/* pc-low-res */
+@media(max-width:1400px) and (min-width:1024px){
+    .main{
+        height: 100vh;
+        display: flex;
+        align-items: center;
+    }
+}
+@media (max-height:600px){
+    .request{
+        padding-top: 20px;
+    }
+    #userName {
+        margin-top: 15px;
+    }  
+    input{
+        margin: 5px 0;
+    }
+}
