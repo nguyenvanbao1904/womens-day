@@ -276,4 +276,6 @@ body{
     width: 80%;
     height: 90%;
     animation: opacityAnimation 0.8s ease-in-out;
+    margin-left: 50%;
+    transform: translateX(-50%);
 }
