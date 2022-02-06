@@ -131,6 +131,7 @@ body{
     align-items: center;
     padding-top: 30px;
     cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
 }
 .info-sender{
     margin-top: 65px;
@@ -218,6 +219,7 @@ body{
     cursor: pointer;
     position: relative;
     line-height: 40px;
+    -webkit-tap-highlight-color: transparent;
 }
 .bottom-line{
     background-color: black;
