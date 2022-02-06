@@ -314,6 +314,7 @@ body{
     font-size: 30px;
     color: white;
     cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
 }
 .show{
     opacity: 1;

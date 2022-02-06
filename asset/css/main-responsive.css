@@ -24,6 +24,9 @@
         width: calc(100% - 10px);
         left: 5px;
     }
+    .album-body {
+        width: 75%;
+    }
 }
 /* tablet */
 @media (max-width:1023px) and (min-width:740px){
@@ -35,6 +38,9 @@
     }
     .main-content{
         margin-top: 100px;
+    }
+    .album-body{
+        width: 50%;
     }
 }
 /* pc-low-res */
