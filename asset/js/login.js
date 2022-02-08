@@ -59,7 +59,7 @@ function checkLogin(){
                     "status":"Ok"
                 }
                 function nextPage(){
-                    window.location.href =`${userName.userName}.html`
+                    window.location.href =`html/${userName.userName}.html`
                 }
                 updateStatus(userName.id,data)
                 setTimeout(nextPage,1000)

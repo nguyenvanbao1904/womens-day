@@ -65,7 +65,7 @@ function resetStatus(){
 function btnLogin(){
     let login = document.querySelector('.login')
     login.addEventListener('click',function(){
-        window.location.href ='index.html'
+        window.location.href ='/index.html'
     })
 }
 
@@ -74,7 +74,7 @@ function btnClose(){
     close.addEventListener('click',function(){
         var rs = confirm('Rất tiếc bạn cần phải đăng nhập để tiếp tục. Vui lòng quay trở lại trang đăng nhập !')
         if(rs){
-            window.location.href ='index.html'
+            window.location.href ='/index.html'
         }
     })
 }
