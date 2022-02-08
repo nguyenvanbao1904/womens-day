@@ -1,11 +1,13 @@
 // check sign in
 var usersApi = 'https://thundering-chatter-safflower.glitch.me/api/userNames'
 var passwordsApi = 'https://thundering-chatter-safflower.glitch.me/api/passwords'
+var dataApi = 'https://thundering-chatter-safflower.glitch.me/api/data'
 var userId = Number(document.querySelector('.name-id').textContent)
 var userText = document.querySelector('.name-text').textContent
 var modal = document.querySelector('.modal')
 
 function start(){
+    render()
     checkStatus()
     setTimeout(resetStatus,5000)
     btnLogin()
@@ -16,6 +18,14 @@ start()
 
 function getUsers(callback){
     fetch(usersApi)
+        .then(function(responsive){
+            return responsive.json()
+        })
+        .then(callback)
+}
+
+function getDatas(callback){
+    fetch(dataApi)
         .then(function(responsive){
             return responsive.json()
         })
@@ -105,3 +115,23 @@ function btnClose(){
             albumBody.classList.remove('show')
         })
 })()
+
+function render(){
+    let name = document.querySelector('.main-content h4')
+    let content = document.querySelector('.main-content-text')
+    let img = document.querySelector('.picture-container img')
+    let imgShow = document.querySelector('.album-body img')
+    let senderName = document.querySelector('.info-name')
+    let senderAvatar = document.querySelector('.info-sender img')
+    let senderContact = document.querySelector('.header-content ul li a')
+
+    getDatas(function(data){
+        name.innerHTML = `Dear<br>${data[userId].full_name}`
+        content.textContent = data[userId].content
+        img.setAttribute('src',data[userId].img)
+        imgShow.setAttribute('src',data[userId].img)
+        senderName.textContent = data[userId].sender
+        senderAvatar.setAttribute('src',data[userId].sender_img)
+        senderContact.setAttribute('href',data[userId].sender_link)
+    })
+}
