@@ -7,7 +7,7 @@ var modal = document.querySelector('.modal')
 
 function start(){
     checkStatus()
-    //setTimeout(resetStatus,5000)
+    setTimeout(resetStatus,5000)
     btnLogin()
     btnClose()
 }

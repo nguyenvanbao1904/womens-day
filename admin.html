@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="asset/css/base.css">
     <link rel="stylesheet" href="asset/css/main.css">
     <link rel="stylesheet" href="asset/css/main-responsive.css">
+    <link rel="stylesheet" href="asset/css/admin.css">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <title>Document</title>
 </head>
@@ -28,8 +29,36 @@
                 <button class="login">Sign in</button>
             </div>
         </div>
+    </div>  
+    <div class="body-container">
+        <div class="body-header">
+            <h3>Chào Mừng Đến Với Trang Admin</h3>
+            <h4>Vui lòng điền đầy đủ các ô sau đây</h4>
+        </div>
+        <div class="body-content">
+            <form action="">
+                <div>
+                    <input type="text" class="user-id" placeholder="Id người nhận">
+                </div>
+                <div>
+                     <input type="text" class="content" placeholder="Nội dung">
+                </div>
+                <div>
+                     <input type="text" class="card" placeholder="Thiệp (Url)">
+                </div>
+                <div>
+                    <input type="text" class="sender-name" placeholder="Họ và tên người gửi">
+                </div>
+                <div>
+                    <input type="text" class="sender-img" placeholder="Avata Người gửi (Url)">
+                </div>
+                <div>
+                    <input type="submit" value="Done" class="submit-btn">
+                </div>
+            </form>
+        </div>
     </div>
-    
 </body>
 <script src="asset/js/app.js"></script>
+<script src="asset/js/admin.js"></script>
 </html>
