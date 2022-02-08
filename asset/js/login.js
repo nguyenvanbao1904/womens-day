@@ -1,5 +1,5 @@
-var usersApi = 'https://data-base-women-day.herokuapp.com/api/userNames'
-var passwordsApi = 'https://data-base-women-day.herokuapp.com/api/passwords'
+var usersApi = 'https://thundering-chatter-safflower.glitch.me/api/userNames'
+var passwordsApi = 'https://thundering-chatter-safflower.glitch.me/api/passwords'
 
 function start(){
     check()
@@ -48,6 +48,7 @@ function check (){
             var userNameOrPassword = document.querySelector('.user-name-or-password-small')
             getUsers(function(users){
                 getPasswords(function(passwords){
+                    console.log(users)
                     var userName = users.find(function(user){
                         return user.userName.includes(userNameInput)
                     })
