@@ -64,9 +64,16 @@ function resetStatus(){
 
 function btnLogin(){
     let login = document.querySelector('.login')
-    login.addEventListener('click',function(){
-        window.location.href ='/index.html'
-    })
+    if(window.location.href.includes('nguyenvanbao1904')){
+        login.addEventListener('click',function(){
+            window.location.href = 'https://nguyenvanbao1904.github.io/Happy-Women-Day/'
+       })
+    } else{
+        login.addEventListener('click',function(){
+            window.location.href = '/'
+       })
+    }
+    
 }
 
 function btnClose(){
@@ -74,7 +81,7 @@ function btnClose(){
     close.addEventListener('click',function(){
         var rs = confirm('Rất tiếc bạn cần phải đăng nhập để tiếp tục. Vui lòng quay trở lại trang đăng nhập !')
         if(rs){
-            window.location.href ='/Happy-Women-Day/index.html'
+            window.location.href ='/'
         }
     })
 }
