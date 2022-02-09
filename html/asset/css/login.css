@@ -87,3 +87,24 @@ small{
     font-size: 14px;
     font-weight: 500;
 }
+.eye-icon{
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    top: 45px;
+    right: 30px;
+    transform: translateY(-100%);
+    cursor: pointer;
+}
+.eye-icon i:last-child{
+    display: none;
+}
+.eye-icon i:first-child{
+    display: block;
+}
+.show-pass.eye-icon i:last-child{
+    display: block;
+}
+.show-pass.eye-icon i:first-child{
+    display: none;
+}

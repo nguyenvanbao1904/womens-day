@@ -3,9 +3,28 @@ var passwordsApi = 'https://thundering-chatter-safflower.glitch.me/api/passwords
 
 function start(){
     check()
+    togleIcon()
 }
 
 start()
+
+function togleIcon(){
+    let eyeIcon = document.querySelector('.eye-icon')
+    eyeIcon.addEventListener('click',function(){
+        eyeIcon.classList.toggle('show-pass')
+        togleInput()
+    })
+}
+
+function togleInput(){
+    let eyeIcon = document.querySelector('.eye-icon')
+    let input = document.querySelector('#password')
+    if(eyeIcon.classList.contains('show-pass')){
+        input.setAttribute('type','text')
+    } else{
+        input.setAttribute('type','password')
+    }
+}
 
 function getUsers(callback){
     fetch(usersApi)
