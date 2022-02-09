@@ -8,7 +8,7 @@ var modal = document.querySelector('.modal')
 
 function start(){
     render()
-    checkStatus()
+    checkStatus(userId)
     setTimeout(resetStatus,5000)
     btnLogin()
     btnClose()
@@ -32,13 +32,17 @@ function getDatas(callback){
         .then(callback)
 }
 
-function checkStatus(){
-    getUsers(function(user){
-        if(user[userId].status==='Ok'){
-            modal.classList.add('hiden')
-        } else{
-            modal.classList.remove('hiden')
-        }
+function checkStatus(userId){
+    getUsers(function(users){
+        users.forEach(function(user){
+            if(user.id===userId){
+                if(user.status==='Ok'){
+                    modal.classList.add('hiden')
+                } else{
+                    modal.classList.remove('hiden')
+                }
+            }
+        })
     })
 }
 
@@ -132,13 +136,17 @@ function render(){
     let senderAvatar = document.querySelector('.info-sender img')
     let senderContact = document.querySelector('.header-content ul li a')
 
-    getDatas(function(data){
-        name.innerHTML = `Dear<br>${data[userId].full_name}`
-        content.textContent = data[userId].content
-        img.setAttribute('src',data[userId].img)
-        imgShow.setAttribute('src',data[userId].img)
-        senderName.textContent = data[userId].sender
-        senderAvatar.setAttribute('src',data[userId].sender_img)
-        senderContact.setAttribute('href',data[userId].sender_link)
+    getDatas(function(datas){
+        datas.forEach(function(data){
+            if(data.id===userId){
+                name.innerHTML = `Dear<br>${data.full_name}`
+                content.textContent = data.content
+                img.setAttribute('src',data.img)
+                imgShow.setAttribute('src',data.img)
+                senderName.textContent = data.sender
+                senderAvatar.setAttribute('src',data.sender_img)
+                senderContact.setAttribute('href',data.sender_link)
+            }
+        })
     })
 }

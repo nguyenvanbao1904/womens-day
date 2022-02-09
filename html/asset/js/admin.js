@@ -30,12 +30,12 @@ function postData(data){
     console.log(data.user_id)
 }
 
-function uploadData(){
+;(function uploadData(){
     let submitBtn = document.querySelector('.submit-btn')
     submitBtn.addEventListener('click',function(e){
         let data = getDataInput()
         e.preventDefault()
         postData(data)
+        alert('Thành công !!!')
     })
-}
-uploadData()
+})()

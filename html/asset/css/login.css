@@ -79,6 +79,9 @@ input::placeholder{
     color: white;
     -webkit-tap-highlight-color: transparent;
 }
+.submit-btn:active{
+    opacity: 0.7;
+}
 small{
     color: red;
     font-size: 14px;
