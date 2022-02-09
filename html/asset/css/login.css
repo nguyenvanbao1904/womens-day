@@ -95,6 +95,7 @@ small{
     right: 30px;
     transform: translateY(-100%);
     cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
 }
 .eye-icon i:last-child{
     display: none;
