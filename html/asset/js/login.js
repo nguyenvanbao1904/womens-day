@@ -60,8 +60,9 @@ function updateStatus(id,data){
 function checkLogin(){
     var userNameInput = document.querySelector('#userName').value   
     var passwordInput = document.querySelector('#password').value
-    var h2 = document.querySelector('h2')
+    var loading = document.querySelector('.loading')
     var userNameOrPassword = document.querySelector('.user-name-or-password-small')
+    loading.classList.remove('hiden')
     getUsers(function(users){
         getPasswords(function(passwords){
             var userName = users.find(function(user){
@@ -83,6 +84,7 @@ function checkLogin(){
                 updateStatus(userName.id,data)
                 setTimeout(nextPage,1000)
             } else{
+                loading.classList.add('hiden')
                 alertError(userNameOrPassword,'Tài Khoản hoặc mật khẩu không chính xác !!')
             }
         })
@@ -97,6 +99,7 @@ function checkLogin(){
 
 function check (){
     var submitBtn = document.querySelector('.submit-btn')
+    var loading = document.querySelector('.loading')
     if(submitBtn){
         submitBtn.addEventListener('click',checkLogin)
     }

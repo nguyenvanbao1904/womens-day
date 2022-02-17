@@ -9,7 +9,7 @@ var modal = document.querySelector('.modal')
 function start(){
     render()
     checkStatus(userId)
-    setTimeout(resetStatus,5000)
+    setTimeout(resetStatus,2000)
     btnLogin()
     btnClose()
 }
