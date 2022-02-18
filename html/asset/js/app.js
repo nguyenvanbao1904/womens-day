@@ -68,7 +68,7 @@ function resetStatus(){
 
 function btnLogin(){
     let login = document.querySelector('.login')
-    if(window.location.href.includes('nguyenvanbao1904')){
+    if(window.location.href.includes('lhp-12c3')){
         login.addEventListener('click',function(){
             window.location.href = 'https://nguyenvanbao1904.github.io/Happy-Women-Day/'
        })
