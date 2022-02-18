@@ -2,11 +2,17 @@ var usersApi = 'https://thundering-chatter-safflower.glitch.me/api/userNames'
 var passwordsApi = 'https://thundering-chatter-safflower.glitch.me/api/passwords'
 
 function start(){
+    designTitleWeb()
     check()
     togleIcon()
 }
 
 start()
+
+function designTitleWeb(){
+    document.querySelector('title').textContent = 'Wellcome To C3 💚 -- Login'
+    document.querySelector('link:last-child').setAttribute('href','./html/asset/img/logo.png')
+}
 
 function togleIcon(){
     let eyeIcon = document.querySelector('.eye-icon')

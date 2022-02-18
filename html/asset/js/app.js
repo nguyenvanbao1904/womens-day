@@ -12,9 +12,16 @@ function start(){
     setTimeout(resetStatus,2000)
     btnLogin()
     btnClose()
+    designTitleWeb()
 }
 
 start()
+
+function designTitleWeb(){
+    document.querySelector('title').textContent = `Dear - ${userText} 💚`
+    document.querySelector('link:last-child').setAttribute('href','./asset/img/logo.png')
+    console.log()
+}
 
 function getUsers(callback){
     fetch(usersApi)
@@ -68,7 +75,7 @@ function resetStatus(){
 
 function btnLogin(){
     let login = document.querySelector('.login')
-    if(window.location.href.includes('lhp-12c3')){
+    if(window.location.href.includes('github.io')){
         login.addEventListener('click',function(){
             window.location.href = 'https://nguyenvanbao1904.github.io/Happy-Women-Day/'
        })
