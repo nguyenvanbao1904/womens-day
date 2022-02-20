@@ -92,7 +92,11 @@ function btnClose(){
     close.addEventListener('click',function(){
         var rs = confirm('Rất tiếc bạn cần phải đăng nhập để tiếp tục. Vui lòng quay trở lại trang đăng nhập !')
         if(rs){
-            window.location.href ='/'
+            if(window.location.href.includes('github.io')){
+                window.location.href = '/womens-day/'
+            } else{
+                window.location.href = '/'
+            }
         }
     })
 }
