@@ -77,7 +77,7 @@ function btnLogin(){
     let login = document.querySelector('.login')
     if(window.location.href.includes('github.io')){
         login.addEventListener('click',function(){
-            window.location.href = 'https://nguyenvanbao1904.github.io/Happy-Women-Day/'
+            window.location.href = '/womens-day/'
        })
     } else{
         login.addEventListener('click',function(){
